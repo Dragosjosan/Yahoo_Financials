@@ -164,7 +164,7 @@ if __name__ == '__main__':
     stock.soup_the_response()
     stock.output_content_as_html()
     stock.match_title('Mstart(a) Mend(a)')
-    stock.match_keys('data-reactid', 'div', stock.keys)
+    stock.match_keys('Pos(r) Mt(10px)', 'div', stock.keys)
     stock.match_values('Fw(500) Ta(end) Pstart(10px) Miw(60px)', 'td', stock.values)
     stock.create_main_dictionary(stock.keys, stock.parsed_list)
     stock.dict_to_json()
