@@ -1,0 +1,193 @@
+{
+  "AAPL": {
+    "Valuation Measures": {
+      "Market Cap (intraday)": 2060000000000.0,
+      "Enterprise Value": 2100000000000.0,
+      "Trailing P/E": 33.36,
+      "Forward P/E": 26.17,
+      "PEG Ratio (5 yr expected)": 1.84,
+      "Price/Sales": 7.02,
+      "Price/Book": 31.25,
+      "Enterprise Value/Revenue": 7.14,
+      "Enterprise Value/EBITDA": 24.66
+    },
+    "Fiscal Year": {
+      "Fiscal Year Ends": "Sep 25, 2020",
+      "Most Recent Quarter": "Dec 25, 2020"
+    },
+    "Profitability": {
+      "Profit Margin": 21.74,
+      "Operating Margin": 25.25
+    },
+    "Management Effectiveness": {
+      "Return on Assets": 13.36,
+      "Return on Equity": 82.09
+    },
+    "Income Statement": {
+      "Revenue": 294140000000.0,
+      "Revenue Per Share": 17.13,
+      "Quarterly Revenue Growth": 21.4,
+      "Gross Profit": 104960000000.0,
+      "EBITDA": 85160000000.0,
+      "Net Income Avi to Common": 63930000000.0,
+      "Diluted EPS": 3.69,
+      "Quarterly Earnings Growth": 29.3
+    },
+    "Balance Sheet": {
+      "Total Cash": 76830000000.0,
+      "Total Cash Per Share": 4.58,
+      "Total Debt": 112040000000.0,
+      "Total Debt/Equity": 169.19,
+      "Current Ratio": 1.16,
+      "Book Value Per Share": 3.94
+    },
+    "Cash Flow Statement": {
+      "Operating Cash Flow": 88920000000.0,
+      "Levered Free Cash Flow": 66890000000.0
+    }
+  }
+}{
+  "TSLA": {
+    "Valuation Measures": {
+      "Market Cap (intraday)": 635180000000.0,
+      "Enterprise Value": 630590000000.0,
+      "Trailing P/E": 1033.98,
+      "Forward P/E": 118.17,
+      "PEG Ratio (5 yr expected)": 4.91,
+      "Price/Sales": 20.14,
+      "Price/Book": 28.58,
+      "Enterprise Value/Revenue": 20.0,
+      "Enterprise Value/EBITDA": 147.57
+    },
+    "Fiscal Year": {
+      "Fiscal Year Ends": "Dec 30, 2020",
+      "Most Recent Quarter": "Dec 30, 2020"
+    },
+    "Profitability": {
+      "Profit Margin": 2.29,
+      "Operating Margin": 6.19
+    },
+    "Management Effectiveness": {
+      "Return on Assets": 2.82,
+      "Return on Equity": 5.42
+    },
+    "Income Statement": {
+      "Revenue": 31540000000.0,
+      "Revenue Per Share": 33.8,
+      "Quarterly Revenue Growth": 45.5,
+      "Gross Profit": 6630000000.0,
+      "EBITDA": 4269999999.9999995,
+      "Net Income Avi to Common": 690000000.0,
+      "Diluted EPS": 0.64,
+      "Quarterly Earnings Growth": 157.1
+    },
+    "Balance Sheet": {
+      "Total Cash": 19380000000.0,
+      "Total Cash Per Share": 20.19,
+      "Total Debt": 13340000000.0,
+      "Total Debt/Equity": 56.32,
+      "Current Ratio": 1.88,
+      "Book Value Per Share": 23.15
+    },
+    "Cash Flow Statement": {
+      "Operating Cash Flow": 5940000000.0,
+      "Levered Free Cash Flow": 3400000000.0
+    }
+  }
+}{{
+  "AAPL": {
+    "Valuation Measures": {
+      "Market Cap (intraday)": 2060000000000.0,
+      "Enterprise Value": 2100000000000.0,
+      "Trailing P/E": 33.36,
+      "Forward P/E": 26.17,
+      "PEG Ratio (5 yr expected)": 1.84,
+      "Price/Sales": 7.02,
+      "Price/Book": 31.25,
+      "Enterprise Value/Revenue": 7.14,
+      "Enterprise Value/EBITDA": 24.66
+    },
+    "Fiscal Year": {
+      "Fiscal Year Ends": "Sep 25, 2020",
+      "Most Recent Quarter": "Dec 25, 2020"
+    },
+    "Profitability": {
+      "Profit Margin": 21.74,
+      "Operating Margin": 25.25
+    },
+    "Management Effectiveness": {
+      "Return on Assets": 13.36,
+      "Return on Equity": 82.09
+    },
+    "Income Statement": {
+      "Revenue": 294140000000.0,
+      "Revenue Per Share": 17.13,
+      "Quarterly Revenue Growth": 21.4,
+      "Gross Profit": 104960000000.0,
+      "EBITDA": 85160000000.0,
+      "Net Income Avi to Common": 63930000000.0,
+      "Diluted EPS": 3.69,
+      "Quarterly Earnings Growth": 29.3
+    },
+    "Balance Sheet": {
+      "Total Cash": 76830000000.0,
+      "Total Cash Per Share": 4.58,
+      "Total Debt": 112040000000.0,
+      "Total Debt/Equity": 169.19,
+      "Current Ratio": 1.16,
+      "Book Value Per Share": 3.94
+    },
+    "Cash Flow Statement": {
+      "Operating Cash Flow": 88920000000.0,
+      "Levered Free Cash Flow": 66890000000.0
+    }
+  }
+}{{
+  "TSLA": {
+    "Valuation Measures": {
+      "Market Cap (intraday)": 635180000000.0,
+      "Enterprise Value": 630590000000.0,
+      "Trailing P/E": 1033.98,
+      "Forward P/E": 118.17,
+      "PEG Ratio (5 yr expected)": 4.91,
+      "Price/Sales": 20.14,
+      "Price/Book": 28.58,
+      "Enterprise Value/Revenue": 20.0,
+      "Enterprise Value/EBITDA": 147.57
+    },
+    "Fiscal Year": {
+      "Fiscal Year Ends": "Dec 30, 2020",
+      "Most Recent Quarter": "Dec 30, 2020"
+    },
+    "Profitability": {
+      "Profit Margin": 2.29,
+      "Operating Margin": 6.19
+    },
+    "Management Effectiveness": {
+      "Return on Assets": 2.82,
+      "Return on Equity": 5.42
+    },
+    "Income Statement": {
+      "Revenue": 31540000000.0,
+      "Revenue Per Share": 33.8,
+      "Quarterly Revenue Growth": 45.5,
+      "Gross Profit": 6630000000.0,
+      "EBITDA": 4269999999.9999995,
+      "Net Income Avi to Common": 690000000.0,
+      "Diluted EPS": 0.64,
+      "Quarterly Earnings Growth": 157.1
+    },
+    "Balance Sheet": {
+      "Total Cash": 19380000000.0,
+      "Total Cash Per Share": 20.19,
+      "Total Debt": 13340000000.0,
+      "Total Debt/Equity": 56.32,
+      "Current Ratio": 1.88,
+      "Book Value Per Share": 23.15
+    },
+    "Cash Flow Statement": {
+      "Operating Cash Flow": 5940000000.0,
+      "Levered Free Cash Flow": 3400000000.0
+    }
+  }
+}{

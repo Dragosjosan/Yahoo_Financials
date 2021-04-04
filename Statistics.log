@@ -1,34 +1,488 @@
-INFO - __main__ - create_url() - 39 - Url to scrap: https://finance.yahoo.com/quote/TSLA/key-statistics?p=TSLA
-INFO - __main__ - get_response() - 48 - Selected url: https://finance.yahoo.com/quote/TSLA/key-statistics?p=TSLA
-INFO - __main__ - check_response() - 54 - Response was successful: <Response [200]>
-INFO - __main__ - soup_the_response() - 61 - The response was souped, and a soup object was created.
-INFO - __main__ - output_content_as_html() - 67 - Content file created: output.html
-INFO - __main__ - match_title() - 74 - Selected search criteria (html format): Mstart(a) Mend(a)
-INFO - __main__ - match_title() - 77 - Selected class (html format): Mstart(a) Mend(a)
-INFO - __main__ - match_title() - 78 - Class Title: Valuation Measures
-INFO - __main__ - match_keys() - 88 - Name list is empty, something went wrong.
-INFO - __main__ - match_values() - 102 - Value list created:['593.87B', '589.28B', '966.73', '112.09', '4.95', '18.83', '26.72', '18.69', '137.91', '2.06', '516.09%', '51.32%', '900.40', '89.28', '710.44', '602.37', '35.75M', '36.62M', '959.85M', '771.32M', '19.99%', '42.53%', '44.73M', '1.09', '5.80%', '4.66%', '47.69M', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0.00%', 'N/A', 'N/A', '5:1', 'Aug 30, 2020', 'Dec 30, 2020', 'Dec 30, 2020', '2.29%', '6.19%', '2.82%', '5.42%', '31.54B', '33.80', '45.50%', '6.63B', '4.27B', '690M', '0.64', '157.10%', '19.38B', '20.19', '13.34B', '56.32', '1.88', '23.15', '5.94B', '3.4B']
-DEBUG - __main__ - parse_list() - 111 - The first 9 elements from ['593.87B', '589.28B', '966.73', '112.09', '4.95', '18.83', '26.72', '18.69', '137.91', '2.06', '516.09%', '51.32%', '900.40', '89.28', '710.44', '602.37', '35.75M', '36.62M', '959.85M', '771.32M', '19.99%', '42.53%', '44.73M', '1.09', '5.80%', '4.66%', '47.69M', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '0.00%', 'N/A', 'N/A', '5:1', 'Aug 30, 2020', 'Dec 30, 2020', 'Dec 30, 2020', '2.29%', '6.19%', '2.82%', '5.42%', '31.54B', '33.80', '45.50%', '6.63B', '4.27B', '690M', '0.64', '157.10%', '19.38B', '20.19', '13.34B', '56.32', '1.88', '23.15', '5.94B', '3.4B'] will be taken
-DEBUG - __main__ - parse_list() - 112 - Elements in the parsed list: ['593.87B', '589.28B', '966.73', '112.09', '4.95', '18.83', '26.72', '18.69', '137.91']
-INFO - __main__ - match_values() - 104 - Parsed list created:['593.87B', '589.28B', '966.73', '112.09', '4.95', '18.83', '26.72', '18.69', '137.91']
-INFO - __main__ - convert_values() - 142 - id: 0 for item: 593.87B
-INFO - __main__ - convert_values() - 145 - A conversion will be necessary for 593.87B
-INFO - __main__ - convert_values() - 146 - Conversion factor 1000000000
-INFO - __main__ - convert_values() - 147 - Old value: 593.87B
-New value: 593870000000.0
-INFO - __main__ - convert_values() - 142 - id: 1 for item: 589.28B
-INFO - __main__ - convert_values() - 145 - A conversion will be necessary for 589.28B
-INFO - __main__ - convert_values() - 146 - Conversion factor 1000000000
-INFO - __main__ - convert_values() - 147 - Old value: 589.28B
-New value: 589280000000.0
-INFO - __main__ - convert_values() - 154 - id: 2 for item:966.73
-INFO - __main__ - convert_values() - 154 - id: 3 for item:112.09
-INFO - __main__ - convert_values() - 154 - id: 4 for item:4.95
-INFO - __main__ - convert_values() - 154 - id: 5 for item:18.83
-INFO - __main__ - convert_values() - 154 - id: 6 for item:26.72
-INFO - __main__ - convert_values() - 154 - id: 7 for item:18.69
-INFO - __main__ - convert_values() - 154 - id: 8 for item:137.91
-INFO - __main__ - convert_values() - 157 - Converted list:[593870000000.0, 589280000000.0, 966.7, 112.0, 4.9, 18.8, 26.7, 18.6, 137.9]
-DEBUG - __main__ - match_values() - 106 - Value list (parsed & converted):[593870000000.0, 589280000000.0, 966.7, 112.0, 4.9, 18.8, 26.7, 18.6, 137.9]
-INFO - __main__ - create_main_dictionary() - 118 - Zipped dictionary: {'TSLA': {'Valuation Measures': {}}}
-INFO - __main__ - dict_to_json() - 123 - Created .json file: TSLA.json
+INFO - __main__ - create_url() - 40 - Url to scrap: https://finance.yahoo.com/quote/AAPL/key-statistics?p=AAPL
+INFO - __main__ - get_response() - 49 - Selected url: https://finance.yahoo.com/quote/AAPL/key-statistics?p=AAPL
+INFO - __main__ - check_response() - 55 - Response was successful: <Response [200]>
+INFO - __main__ - soup_the_response() - 62 - The response was souped, and a soup object was created.
+INFO - __main__ - output_content_as_html() - 68 - Content file created: output.html
+INFO - __main__ - check_if_list_empty() - 100 - List hast this many elements:59
+INFO - __main__ - check_if_list_empty() - 100 - List hast this many elements:59
+INFO - __main__ - convert_values() - 141 - id: 0 for item: 2.06T
+INFO - __main__ - convert_values() - 144 - A conversion will be necessary for 2.06T
+INFO - __main__ - convert_values() - 145 - Conversion factor 1000000000000
+INFO - __main__ - convert_values() - 146 - Old value: 2.06T
+	New value: 2060000000000.0
+INFO - __main__ - convert_values() - 141 - id: 1 for item: 2.1T
+INFO - __main__ - convert_values() - 144 - A conversion will be necessary for 2.1T
+INFO - __main__ - convert_values() - 145 - Conversion factor 1000000000000
+INFO - __main__ - convert_values() - 146 - Old value: 2.1T
+	New value: 2100000000000.0
+INFO - __main__ - convert_values() - 195 - id: 2 for item: 33.36
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 3 for item: 26.17
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 4 for item: 1.84
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 5 for item: 7.02
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 6 for item: 31.25
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 7 for item: 7.14
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 8 for item: 24.66
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 9 for item: 1.25
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 10 for item: 87.45%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 87.45%
+	New value: 87.45
+INFO - __main__ - convert_values() - 183 - id: 11 for item: 50.91%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 50.91%
+	New value: 50.91
+INFO - __main__ - convert_values() - 195 - id: 12 for item: 145.09
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 13 for item: 62.35
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 14 for item: 123.31
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 15 for item: 123.17
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 157 - id: 16 for item: 109.58M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 109.58M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 109.58M
+	New value: 109580000.0
+INFO - __main__ - convert_values() - 157 - id: 17 for item: 92.1M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 92.1M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 92.1M
+	New value: 92100000.0
+INFO - __main__ - convert_values() - 149 - id: 18 for item: 16.79B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 16.79B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 16.79B
+	New value: 16790000000.0
+INFO - __main__ - convert_values() - 149 - id: 19 for item: 16.77B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 16.77B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 16.77B
+	New value: 16770000000.0
+INFO - __main__ - convert_values() - 183 - id: 20 for item: 0.08%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.08%
+	New value: 0.08
+INFO - __main__ - convert_values() - 183 - id: 21 for item: 59.77%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 59.77%
+	New value: 59.77
+INFO - __main__ - convert_values() - 157 - id: 22 for item: 107.01M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 107.01M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 107.01M
+	New value: 107010000.0
+INFO - __main__ - convert_values() - 195 - id: 23 for item: 0.89
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 24 for item: 0.64%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.64%
+	New value: 0.64
+INFO - __main__ - convert_values() - 183 - id: 25 for item: 0.64%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.64%
+	New value: 0.64
+INFO - __main__ - convert_values() - 157 - id: 26 for item: 88.33M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 88.33M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 88.33M
+	New value: 88330000.0
+INFO - __main__ - convert_values() - 195 - id: 27 for item: 0.82
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 28 for item: 0.67%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.67%
+	New value: 0.67
+INFO - __main__ - convert_values() - 195 - id: 29 for item: 0.81
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 30 for item: 0.66%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.66%
+	New value: 0.66
+INFO - __main__ - convert_values() - 195 - id: 31 for item: 1.39
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 32 for item: 21.77%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 21.77%
+	New value: 21.77
+INFO - __main__ - convert_values() - 165 - id: 33 for item: Feb 10, 2021
+INFO - __main__ - convert_values() - 167 - Date format found: Feb 10, 2021
+INFO - __main__ - convert_values() - 168 - Old value: Feb 10, 2021
+	New value: Feb 10, 2021
+INFO - __main__ - convert_values() - 165 - id: 34 for item: Feb 04, 2021
+INFO - __main__ - convert_values() - 167 - Date format found: Feb 04, 2021
+INFO - __main__ - convert_values() - 168 - Old value: Feb 04, 2021
+	New value: Feb 04, 2021
+INFO - __main__ - convert_values() - 189 - id: 35 for item: 4:1
+INFO - __main__ - convert_values() - 191 - Colon symbol found in list: 
+INFO - __main__ - convert_values() - 192 - Old value: 4:1
+	New value: 4:1
+INFO - __main__ - convert_values() - 165 - id: 36 for item: Aug 30, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Aug 30, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Aug 30, 2020
+	New value: Aug 30, 2020
+INFO - __main__ - convert_values() - 165 - id: 37 for item: Sep 25, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Sep 25, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Sep 25, 2020
+	New value: Sep 25, 2020
+INFO - __main__ - convert_values() - 165 - id: 38 for item: Dec 25, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Dec 25, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Dec 25, 2020
+	New value: Dec 25, 2020
+INFO - __main__ - convert_values() - 183 - id: 39 for item: 21.74%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 21.74%
+	New value: 21.74
+INFO - __main__ - convert_values() - 183 - id: 40 for item: 25.25%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 25.25%
+	New value: 25.25
+INFO - __main__ - convert_values() - 183 - id: 41 for item: 13.36%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 13.36%
+	New value: 13.36
+INFO - __main__ - convert_values() - 183 - id: 42 for item: 82.09%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 82.09%
+	New value: 82.09
+INFO - __main__ - convert_values() - 149 - id: 43 for item: 294.14B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 294.14B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 294.14B
+	New value: 294140000000.0
+INFO - __main__ - convert_values() - 195 - id: 44 for item: 17.13
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 45 for item: 21.40%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 21.40%
+	New value: 21.4
+INFO - __main__ - convert_values() - 149 - id: 46 for item: 104.96B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 104.96B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 104.96B
+	New value: 104960000000.0
+INFO - __main__ - convert_values() - 149 - id: 47 for item: 85.16B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 85.16B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 85.16B
+	New value: 85160000000.0
+INFO - __main__ - convert_values() - 149 - id: 48 for item: 63.93B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 63.93B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 63.93B
+	New value: 63930000000.0
+INFO - __main__ - convert_values() - 195 - id: 49 for item: 3.69
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 50 for item: 29.30%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 29.30%
+	New value: 29.3
+INFO - __main__ - convert_values() - 149 - id: 51 for item: 76.83B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 76.83B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 76.83B
+	New value: 76830000000.0
+INFO - __main__ - convert_values() - 195 - id: 52 for item: 4.58
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 149 - id: 53 for item: 112.04B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 112.04B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 112.04B
+	New value: 112040000000.0
+INFO - __main__ - convert_values() - 195 - id: 54 for item: 169.19
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 55 for item: 1.16
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 56 for item: 3.94
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 149 - id: 57 for item: 88.92B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 88.92B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 88.92B
+	New value: 88920000000.0
+INFO - __main__ - convert_values() - 149 - id: 58 for item: 66.89B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 66.89B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 66.89B
+	New value: 66890000000.0
+INFO - __main__ - convert_values() - 199 - Converted list:[2060000000000.0, 2100000000000.0, 33.36, 26.17, 1.84, 7.02, 31.25, 7.14, 24.66, 1.25, 87.45, 50.91, 145.09, 62.35, 123.31, 123.17, 109580000.0, 92100000.0, 16790000000.0, 16770000000.0, 0.08, 59.77, 107010000.0, 0.89, 0.64, 0.64, 88330000.0, 0.82, 0.67, 0.81, 0.66, 1.39, 21.77, 'Feb 10, 2021', 'Feb 04, 2021', '4:1', 'Aug 30, 2020', 'Sep 25, 2020', 'Dec 25, 2020', 21.74, 25.25, 13.36, 82.09, 294140000000.0, 17.13, 21.4, 104960000000.0, 85160000000.0, 63930000000.0, 3.69, 29.3, 76830000000.0, 4.58, 112040000000.0, 169.19, 1.16, 3.94, 88920000000.0, 66890000000.0]
+INFO - __main__ - convert_values() - 200 - Converted list length:59
+INFO - __main__ - create_index_dictionary() - 120 - Zipped dictionary: {'AAPL': {'Valuation Measures': {'Market Cap (intraday)': 2060000000000.0, 'Enterprise Value': 2100000000000.0, 'Trailing P/E': 33.36, 'Forward P/E': 26.17, 'PEG Ratio (5 yr expected)': 1.84, 'Price/Sales': 7.02, 'Price/Book': 31.25, 'Enterprise Value/Revenue': 7.14, 'Enterprise Value/EBITDA': 24.66}, 'Fiscal Year': {'Fiscal Year Ends': 'Sep 25, 2020', 'Most Recent Quarter': 'Dec 25, 2020'}, 'Profitability': {'Profit Margin': 21.74, 'Operating Margin': 25.25}, 'Management Effectiveness': {'Return on Assets': 13.36, 'Return on Equity': 82.09}, 'Income Statement': {'Revenue': 294140000000.0, 'Revenue Per Share': 17.13, 'Quarterly Revenue Growth': 21.4, 'Gross Profit': 104960000000.0, 'EBITDA': 85160000000.0, 'Net Income Avi to Common': 63930000000.0, 'Diluted EPS': 3.69, 'Quarterly Earnings Growth': 29.3}, 'Balance Sheet': {'Total Cash': 76830000000.0, 'Total Cash Per Share': 4.58, 'Total Debt': 112040000000.0, 'Total Debt/Equity': 169.19, 'Current Ratio': 1.16, 'Book Value Per Share': 3.94}, 'Cash Flow Statement': {'Operating Cash Flow': 88920000000.0, 'Levered Free Cash Flow': 66890000000.0}}}
+INFO - __main__ - dict_to_json() - 125 - Created .json file: AAPL.json
+INFO - __main__ - <module>() - 218 - Created .json file: Yahoo_Financials.json
+INFO - __main__ - create_url() - 40 - Url to scrap: https://finance.yahoo.com/quote/TSLA/key-statistics?p=TSLA
+INFO - __main__ - get_response() - 49 - Selected url: https://finance.yahoo.com/quote/TSLA/key-statistics?p=TSLA
+INFO - __main__ - check_response() - 55 - Response was successful: <Response [200]>
+INFO - __main__ - soup_the_response() - 62 - The response was souped, and a soup object was created.
+INFO - __main__ - output_content_as_html() - 68 - Content file created: output.html
+INFO - __main__ - check_if_list_empty() - 100 - List hast this many elements:59
+INFO - __main__ - check_if_list_empty() - 100 - List hast this many elements:59
+INFO - __main__ - convert_values() - 149 - id: 0 for item: 635.18B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 635.18B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 635.18B
+	New value: 635180000000.0
+INFO - __main__ - convert_values() - 149 - id: 1 for item: 630.59B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 630.59B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 630.59B
+	New value: 630590000000.0
+INFO - __main__ - convert_values() - 171 - id: 2 for item: 1,033.98
+INFO - __main__ - convert_values() - 173 - ','Found in list: 1,033.98
+INFO - __main__ - convert_values() - 174 - Old value: 1,033.98
+	New value: 1033.98
+INFO - __main__ - convert_values() - 195 - id: 3 for item: 118.17
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 4 for item: 4.91
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 5 for item: 20.14
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 6 for item: 28.58
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 7 for item: 20.00
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 8 for item: 147.57
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 9 for item: 2.06
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 10 for item: 540.93%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 540.93%
+	New value: 540.93
+INFO - __main__ - convert_values() - 183 - id: 11 for item: 50.91%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 50.91%
+	New value: 50.91
+INFO - __main__ - convert_values() - 195 - id: 12 for item: 900.40
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 13 for item: 99.59
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 14 for item: 680.13
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 15 for item: 613.11
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 157 - id: 16 for item: 35.57M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 35.57M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 35.57M
+	New value: 35570000.0
+INFO - __main__ - convert_values() - 157 - id: 17 for item: 34.95M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 34.95M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 34.95M
+	New value: 34950000.0
+INFO - __main__ - convert_values() - 157 - id: 18 for item: 959.85M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 959.85M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 959.85M
+	New value: 959850000.0
+INFO - __main__ - convert_values() - 157 - id: 19 for item: 771.32M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 771.32M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 771.32M
+	New value: 771320000.0
+INFO - __main__ - convert_values() - 183 - id: 20 for item: 19.73%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 19.73%
+	New value: 19.73
+INFO - __main__ - convert_values() - 183 - id: 21 for item: 45.97%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 45.97%
+	New value: 45.97
+INFO - __main__ - convert_values() - 157 - id: 22 for item: 44.73M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 44.73M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 44.73M
+	New value: 44730000.0
+INFO - __main__ - convert_values() - 195 - id: 23 for item: 1.09
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 24 for item: 5.80%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 5.80%
+	New value: 5.8
+INFO - __main__ - convert_values() - 183 - id: 25 for item: 4.66%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 4.66%
+	New value: 4.66
+INFO - __main__ - convert_values() - 157 - id: 26 for item: 47.69M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 47.69M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 47.69M
+	New value: 47690000.0
+INFO - __main__ - convert_values() - 177 - id: 27 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 177 - id: 28 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 177 - id: 29 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 177 - id: 30 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 177 - id: 31 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 183 - id: 32 for item: 0.00%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 0.00%
+	New value: 0.0
+INFO - __main__ - convert_values() - 177 - id: 33 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 177 - id: 34 for item: N/A
+INFO - __main__ - convert_values() - 179 - N/A element found in list: N/A
+INFO - __main__ - convert_values() - 180 - Old value: N/A
+	New value: N/A
+INFO - __main__ - convert_values() - 189 - id: 35 for item: 5:1
+INFO - __main__ - convert_values() - 191 - Colon symbol found in list: 
+INFO - __main__ - convert_values() - 192 - Old value: 5:1
+	New value: 5:1
+INFO - __main__ - convert_values() - 165 - id: 36 for item: Aug 30, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Aug 30, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Aug 30, 2020
+	New value: Aug 30, 2020
+INFO - __main__ - convert_values() - 165 - id: 37 for item: Dec 30, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Dec 30, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Dec 30, 2020
+	New value: Dec 30, 2020
+INFO - __main__ - convert_values() - 165 - id: 38 for item: Dec 30, 2020
+INFO - __main__ - convert_values() - 167 - Date format found: Dec 30, 2020
+INFO - __main__ - convert_values() - 168 - Old value: Dec 30, 2020
+	New value: Dec 30, 2020
+INFO - __main__ - convert_values() - 183 - id: 39 for item: 2.29%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 2.29%
+	New value: 2.29
+INFO - __main__ - convert_values() - 183 - id: 40 for item: 6.19%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 6.19%
+	New value: 6.19
+INFO - __main__ - convert_values() - 183 - id: 41 for item: 2.82%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 2.82%
+	New value: 2.82
+INFO - __main__ - convert_values() - 183 - id: 42 for item: 5.42%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 5.42%
+	New value: 5.42
+INFO - __main__ - convert_values() - 149 - id: 43 for item: 31.54B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 31.54B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 31.54B
+	New value: 31540000000.0
+INFO - __main__ - convert_values() - 195 - id: 44 for item: 33.80
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 45 for item: 45.50%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 45.50%
+	New value: 45.5
+INFO - __main__ - convert_values() - 149 - id: 46 for item: 6.63B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 6.63B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 6.63B
+	New value: 6630000000.0
+INFO - __main__ - convert_values() - 149 - id: 47 for item: 4.27B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 4.27B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 4.27B
+	New value: 4269999999.9999995
+INFO - __main__ - convert_values() - 157 - id: 48 for item: 690M
+INFO - __main__ - convert_values() - 160 - A conversion will be necessary for 690M
+INFO - __main__ - convert_values() - 161 - Conversion factor 1000000
+INFO - __main__ - convert_values() - 162 - Old value: 690M
+	New value: 690000000.0
+INFO - __main__ - convert_values() - 195 - id: 49 for item: 0.64
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 183 - id: 50 for item: 157.10%
+INFO - __main__ - convert_values() - 185 - Percentage symbol found in list: 
+INFO - __main__ - convert_values() - 186 - Old value: 157.10%
+	New value: 157.1
+INFO - __main__ - convert_values() - 149 - id: 51 for item: 19.38B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 19.38B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 19.38B
+	New value: 19380000000.0
+INFO - __main__ - convert_values() - 195 - id: 52 for item: 20.19
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 149 - id: 53 for item: 13.34B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 13.34B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 13.34B
+	New value: 13340000000.0
+INFO - __main__ - convert_values() - 195 - id: 54 for item: 56.32
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 55 for item: 1.88
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 195 - id: 56 for item: 23.15
+INFO - __main__ - convert_values() - 197 - Type <class 'str'> found in list.
+Transformed in type: for item:<class 'float'>
+INFO - __main__ - convert_values() - 149 - id: 57 for item: 5.94B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 5.94B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 5.94B
+	New value: 5940000000.0
+INFO - __main__ - convert_values() - 149 - id: 58 for item: 3.4B
+INFO - __main__ - convert_values() - 152 - A conversion will be necessary for 3.4B
+INFO - __main__ - convert_values() - 153 - Conversion factor 1000000000
+INFO - __main__ - convert_values() - 154 - Old value: 3.4B
+	New value: 3400000000.0
+INFO - __main__ - convert_values() - 199 - Converted list:[635180000000.0, 630590000000.0, 1033.98, 118.17, 4.91, 20.14, 28.58, 20.0, 147.57, 2.06, 540.93, 50.91, 900.4, 99.59, 680.13, 613.11, 35570000.0, 34950000.0, 959850000.0, 771320000.0, 19.73, 45.97, 44730000.0, 1.09, 5.8, 4.66, 47690000.0, 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 0.0, 'N/A', 'N/A', '5:1', 'Aug 30, 2020', 'Dec 30, 2020', 'Dec 30, 2020', 2.29, 6.19, 2.82, 5.42, 31540000000.0, 33.8, 45.5, 6630000000.0, 4269999999.9999995, 690000000.0, 0.64, 157.1, 19380000000.0, 20.19, 13340000000.0, 56.32, 1.88, 23.15, 5940000000.0, 3400000000.0]
+INFO - __main__ - convert_values() - 200 - Converted list length:59
+INFO - __main__ - create_index_dictionary() - 120 - Zipped dictionary: {'TSLA': {'Valuation Measures': {'Market Cap (intraday)': 635180000000.0, 'Enterprise Value': 630590000000.0, 'Trailing P/E': 1033.98, 'Forward P/E': 118.17, 'PEG Ratio (5 yr expected)': 4.91, 'Price/Sales': 20.14, 'Price/Book': 28.58, 'Enterprise Value/Revenue': 20.0, 'Enterprise Value/EBITDA': 147.57}, 'Fiscal Year': {'Fiscal Year Ends': 'Dec 30, 2020', 'Most Recent Quarter': 'Dec 30, 2020'}, 'Profitability': {'Profit Margin': 2.29, 'Operating Margin': 6.19}, 'Management Effectiveness': {'Return on Assets': 2.82, 'Return on Equity': 5.42}, 'Income Statement': {'Revenue': 31540000000.0, 'Revenue Per Share': 33.8, 'Quarterly Revenue Growth': 45.5, 'Gross Profit': 6630000000.0, 'EBITDA': 4269999999.9999995, 'Net Income Avi to Common': 690000000.0, 'Diluted EPS': 0.64, 'Quarterly Earnings Growth': 157.1}, 'Balance Sheet': {'Total Cash': 19380000000.0, 'Total Cash Per Share': 20.19, 'Total Debt': 13340000000.0, 'Total Debt/Equity': 56.32, 'Current Ratio': 1.88, 'Book Value Per Share': 23.15}, 'Cash Flow Statement': {'Operating Cash Flow': 5940000000.0, 'Levered Free Cash Flow': 3400000000.0}}}
+INFO - __main__ - dict_to_json() - 125 - Created .json file: TSLA.json
+INFO - __main__ - <module>() - 218 - Created .json file: Yahoo_Financials.json
