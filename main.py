@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import logging
 import json
 import re
-
+import csv
+import os
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -17,6 +18,30 @@ stderr_log_handler = logging.StreamHandler()
 logger.addHandler(stderr_log_handler)
 
 logger.addHandler(file_handler)
+
+
+class CsvReader:
+    """
+    Finds all .csv files (only Nasdaq) and takes the indexes out of it.
+    """
+
+    def __init__(self):
+        self.index_list = []
+
+    def list_csv_files(self):
+        for file in os.listdir():
+            if file.endswith('.csv') and 'nasdaq' in file:
+                logger.info('We have a match: {}'.format(file))
+                logger.info('File type: {}'.format(type(file)))
+                with open(file, 'r') as csv_file:
+                    content = csv.reader(csv_file, delimiter=',')
+                    for idx, index_ in enumerate(content):
+                            print(index_)
+                            self.index_list.append(index_[0])
+                print(self.index_list)
+                logger.info('Indexes: {}'.format((self.index_list)))
+            else:
+                logger.info('Not a .csv file: {}'.format(file))
 
 
 class YahooFinancials:
@@ -133,11 +158,18 @@ class YahooFinancials:
         conversion_factors = {
             'T': 1_000_000_000_000,
             'B': 1_000_000_000,
-            'M': 1_000_000
+            'M': 1_000_000,
+            'k': 1_000
         }
         regex_date = re.compile(r'\D{3}\s\d{2}.\s\d{4}')  # Example: Aug 30, 2020
         for idx, item in enumerate(list_):
-            if 'T' in item:
+            if regex_date.search(item) is not None:  # Example: Aug 30, 2020
+                logger.info('id: {} for item: {}'.format(idx, item))
+                new_item = str(item)
+                logger.info('Date format found: {}'.format(item))
+                logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
+                list_[idx] = new_item
+            elif 'T' in item:
                 logger.info('id: {} for item: {}'.format(idx, item))
                 float_v_item = float(item[:-1])
                 new_item = float_v_item * conversion_factors['T']
@@ -161,10 +193,12 @@ class YahooFinancials:
                 logger.info('Conversion factor {}'.format(conversion_factors['M']))
                 logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
                 list_[idx] = new_item
-            elif regex_date.search(item) is not None:  # Example: Aug 30, 2020
+            elif 'k' in item:
                 logger.info('id: {} for item: {}'.format(idx, item))
-                new_item = str(item)
-                logger.info('Date format found: {}'.format(item))
+                float_v_item = float(item[:-1])
+                new_item = float_v_item * conversion_factors['k']
+                logger.info('A conversion will be necessary for {}'.format(item))
+                logger.info('Conversion factor {}'.format(conversion_factors['k']))
                 logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
                 list_[idx] = new_item
             elif ',' in item:
@@ -199,12 +233,13 @@ class YahooFinancials:
         logger.info('Converted list:{}'.format(list_))
         logger.info('Converted list length:{}'.format(len(list_)))
 
-stock_list = ['AAPL', 'TSLA']
 
 if __name__ == '__main__':
+    index = CsvReader()
+    index.list_csv_files()
     with open(f'Yahoo_Financials.json', 'w') as json_file:
         json_file.write('[')
-        for item in stock_list:
+        for item in index.index_list[1:]:
             stock = YahooFinancials(item)
             stock.create_url()
             stock.get_response()
