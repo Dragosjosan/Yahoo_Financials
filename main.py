@@ -201,10 +201,10 @@ class YahooFinancials:
 
 stock_list = ['AAPL', 'TSLA']
 
-with open(f'Yahoo_Financials.json', 'a') as json_file:
-    json_file.write('{')
-    for item in stock_list:
-        if __name__ == '__main__':
+if __name__ == '__main__':
+    with open(f'Yahoo_Financials.json', 'w') as json_file:
+        json_file.write('[')
+        for item in stock_list:
             stock = YahooFinancials(item)
             stock.create_url()
             stock.get_response()
@@ -213,6 +213,7 @@ with open(f'Yahoo_Financials.json', 'a') as json_file:
             stock.match_keys_and_values()
             stock.create_index_dictionary(stock.keys, stock.values)
             stock.dict_to_json()
-        json.dump(stock.dictionary, json_file,indent=2)
-        json_file.write('{')
+            json.dump(stock.dictionary, json_file,indent=2)
+            json_file.write(',')
         logger.info('Created .json file: Yahoo_Financials.json')
+        json_file.write(']')
