@@ -130,7 +130,7 @@ class YahooFinancials:
         logger.debug("The first {} elements from {} will be taken".format(upper_limit, list_to_change))
         logger.debug("Elements in the parsed list: {}".format(self.parsed_list))
 
-    def create_index_dictionary(self, list_1, list_2):
+    def append_index_dictionary(self, x, list_1, list_2):
         """Hard coded dictionary, specifically built for the Yahoo Scraper"""
         all_dict = {
             'Valuation Measures': dict(zip(list_1[:9], list_2[:9])),
@@ -141,7 +141,7 @@ class YahooFinancials:
             'Balance Sheet': dict(zip(list_1[51:57], list_2[51:57])),
             'Cash Flow Statement': dict(zip(list_1[57:59], list_2[57:59])),
         }
-        self.dictionary = {self.index: all_dict}
+        x[self.index] = all_dict
         logger.info('Zipped dictionary: {}'.format(self.dictionary))
 
     def dict_to_json(self):
@@ -201,6 +201,13 @@ class YahooFinancials:
                 logger.info('Conversion factor {}'.format(conversion_factors['k']))
                 logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
                 list_[idx] = new_item
+            elif ',' and '%' in item:
+                logger.info('id: {} for item: {}'.format(idx, item))
+                new_item = item.replace(',', '')
+                new_item = float(new_item[:-1])
+                logger.info('\',\'Found in list: {}'.format(item))
+                logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
+                list_[idx] = float(new_item)
             elif ',' in item:
                 logger.info('id: {} for item: {}'.format(idx, item))
                 new_item = item.replace(',', '')
@@ -237,8 +244,9 @@ class YahooFinancials:
 if __name__ == '__main__':
     index = CsvReader()
     index.list_csv_files()
+    x = {}
     with open(f'Yahoo_Financials.json', 'w') as json_file:
-        json_file.write('[')
+        # json_file.write('[')
         for item in index.index_list[1:]:
             stock = YahooFinancials(item)
             stock.create_url()
@@ -246,9 +254,11 @@ if __name__ == '__main__':
             stock.soup_the_response()
             stock.output_content_as_html()
             stock.match_keys_and_values()
-            stock.create_index_dictionary(stock.keys, stock.values)
-            stock.dict_to_json()
-            json.dump(stock.dictionary, json_file,indent=2)
-            json_file.write(',')
+            stock.append_index_dictionary(x, stock.keys, stock.values)
+            # x[item] = stock.dictionary#[stock.index]
+            # stock.dict_to_json()
+            # json.dump(stock.dictionary, json_file, indent=2)
+            # json_file.write(',')
+        json.dump(x, json_file)
         logger.info('Created .json file: Yahoo_Financials.json')
-        json_file.write(']')
+        # json_file.write(']')

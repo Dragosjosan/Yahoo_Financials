@@ -1,0 +1,16 @@
+{
+  "CSCO": {
+    "Valuation Measures":
+	{
+      "Market Cap (intraday)": 219910000000.0,
+      "Enterprise Value": 204950000000.0,
+      "Trailing P/E": 21.79,
+      "Forward P/E": 15.23,
+      "PEG Ratio (5 yr expected)": 2.3,
+      "Price/Sales": 4.58,
+      "Price/Book": 5.62,
+      "Enterprise Value/Revenue": 4.27,
+      "Enterprise Value/EBITDA": 13.45
+    },
+  }
+}

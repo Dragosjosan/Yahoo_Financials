@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: dash-access
+Version: 0.0.3
+Summary: Granular access control for Dash
+Home-page: https://github.com/russellromney/dash-access
+Author: Russell Romney
+Author-email: russellromney@gmail.com
+License: MIT
+Download-URL: https://github.com/russellromney/dash-access/archive/v0.0.3.tar.gz
+Description: A simple, granular access control system for Dash, with object-oriented or API-based approaces
+Keywords: dash callbacks plotly access authorization authentication flask python flask-login python3 user-access
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

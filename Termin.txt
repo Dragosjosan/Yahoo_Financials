@@ -1,0 +1,3 @@
+Termin 11.04.2021:
+- Index entfernen und mit Aktien Name ersetzen.
+- die letze zwei Sachen (Sector,Industry) aus der .csv nehmen. -> zwei extra Einträge in der .json {Sector}{Industry}
