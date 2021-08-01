@@ -5,6 +5,7 @@ import json
 import re
 import csv
 import os
+import time
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -69,7 +70,14 @@ class YahooFinancials:
         """
         Downloads the .html info using the requests module.
         """
-        self.response = requests.get(self.yahoo_url)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'DNT': '1',  # Do Not Track Request Header
+            'Connection': 'close'
+        }
+        self.response = requests.get(self.yahoo_url, headers=headers, timeout=5)
         self.content = self.response.content
         logger.info('Selected url: {}'.format(self.yahoo_url))
         self.check_response()
@@ -220,6 +228,12 @@ class YahooFinancials:
                 logger.info('N/A element found in list: {}'.format(new_item))
                 logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
                 list_[idx] = new_item
+            elif '∞' in item:
+                logger.info('id: {} for item: {}'.format(idx, item))
+                new_item = item
+                logger.info('∞ element found in list: {}'.format(new_item))
+                logger.info('Old value: {}\n\tNew value: {}'.format(item, new_item))
+                list_[idx] = new_item
             elif '%' in item:
                 logger.info('id: {} for item: {}'.format(idx, item))
                 new_item = float(item[:-1])
@@ -248,6 +262,7 @@ if __name__ == '__main__':
     with open(f'Yahoo_Financials.json', 'w') as json_file:
         # json_file.write('[')
         for item in index.index_list[1:]:
+            time.sleep(10)
             stock = YahooFinancials(item)
             stock.create_url()
             stock.get_response()
